@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 #Cria a aplicação Flask
 
 app = Flask(__name__)
@@ -6,7 +6,11 @@ app = Flask(__name__)
 #Define uma rota
 @app.route('/')
 def index():
-    return "Olá, mundo! O Flask OK"
+    return render_template("index.html")
+
+@app.route("/produtos")
+def produtos():
+    return render_template("produtos.html")
 
 @app.route("/sobre")
 def sobre():
