@@ -17,11 +17,6 @@ def produtos():
     ]
     return render_template("produtos.html", produtos=lista)
 
-
-@app.route("/produtos")
-def produtos():
-    return render_template("produtos.html")
-
 @app.route("/sobre")
 def sobre():
     return "Esta é a página sobre."
