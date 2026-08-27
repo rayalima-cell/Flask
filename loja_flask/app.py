@@ -10,6 +10,16 @@ def index():
 
 @app.route("/produtos")
 def produtos():
+    lista = [
+        {"nome": "Notebook", "preco": 3499.90},
+        {"nome": "Mouse",    "preco": 89.90},
+        {"nome": "Teclado",  "preco": 249.90}
+    ]
+    return render_template("produtos.html", produtos=lista)
+
+
+@app.route("/produtos")
+def produtos():
     return render_template("produtos.html")
 
 @app.route("/sobre")
