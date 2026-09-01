@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Loja</title>
+</head>
+<body>
+
+    <h1>Bem-Vindo à minha loja</h1>
+    <p>Sistema de gerenciamento de produtos</p>
+
+    <nav>
+        <a href="/">Inicío</a>
+        <a href="{{ url_for('produto')}}">Produto</a>
+        <a href="{{(' url_for('sobre')')}}">Sobre</a>
+        <a href="{{( url_for('catalogo'))}}">Catalogo</a>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogo</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Inicío</a>
+        <a href="{{ url_for('produto')}}">Produto</a>
+        <a href="{{(' url_for('sobre')')}}">Sobre</a>
+        <a href="{{( url_for('catalogo'))}}">Catalogo</a>
+    </nav>
+
+<h1>Catálogo</h1>
+
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Categoria</th>
+        <th>Ação</th>
+    </tr>
+    {% for p in produtos%}
+    <tr
+        {% if p.quantidade == 0%}
+            style="background-color: red;"
+        {% elif p.quantidade <5 %}
+            style="backgroud-color: orange;"
+        {% else %}
+            style="backgroud-color: blue;"
+        {% endif %}
+    >
+
+    </tr>
+</table>
+
+</body>
+</html>
